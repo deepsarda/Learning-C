@@ -27,21 +27,20 @@ int main(){
 
     printf("\nPercentage: %f%%\n", percentage);
 
-    //TODO: Better way/extract to function.
     if(percentage >= 95){
-        printf("Grade: S");
+        printf("Division: S");
     }else if(percentage >= 85){
-        printf("Grade: A");
+        printf("Division: A");
     }else if(percentage >= 75){
-        printf("Grade: B");
+        printf("Division: B");
     }else if(percentage >= 65){
-        printf("Grade: C");
+        printf("Division: C");
     }else if(percentage >= 55){
-        printf("Grade: D");
+        printf("Division: D");
     }else if(percentage >= 45){
-        printf("Grade: E");
+        printf("Division: E");
     }else{
-        printf("Grade: F");
+        printf("Division: F");
     }
 
     return 0;
