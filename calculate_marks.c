@@ -28,19 +28,19 @@ int main(){
     printf("\nPercentage: %f%%\n", percentage);
 
     if(percentage >= 95){
-        printf("Division: S");
+        printf("Division: S\n");
     }else if(percentage >= 85){
-        printf("Division: A");
+        printf("Division: A\n");
     }else if(percentage >= 75){
-        printf("Division: B");
+        printf("Division: B\n");
     }else if(percentage >= 65){
-        printf("Division: C");
+        printf("Division: C\n");
     }else if(percentage >= 55){
-        printf("Division: D");
+        printf("Division: D\n");
     }else if(percentage >= 45){
-        printf("Division: E");
+        printf("Division: E\n");
     }else{
-        printf("Division: F");
+        printf("Division: F\n");
     }
 
     return 0;
