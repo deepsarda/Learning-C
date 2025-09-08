@@ -1,6 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
+int main()
+{
 
     int seconds, minutes, hours, days, total_seconds, total_minutes, total_hours;
 
@@ -16,7 +17,6 @@ int main(){
     hours = total_hours % 24;
 
     days = total_hours / 24;
-    
-    printf("The period of revolution is %d days %d hr %d min %d s.\n", days, hours, minutes, seconds);
 
+    printf("The given time is %d days %d hr %d min %d s.\n", days, hours, minutes, seconds);
 }
