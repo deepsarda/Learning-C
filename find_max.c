@@ -1,7 +1,8 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
-    int a,b,c;
+int main()
+{
+    int a, b, c;
 
     printf("Enter A: ");
     scanf("%d", &a);
@@ -12,21 +13,25 @@ int main(){
     printf("Enter C: ");
     scanf("%d", &c);
 
-    if (a > b && a > c){
-        printf("A is maximum.\n");
+    if (a > b)
+    {
+        if (a > c)
+        {
+            printf("A is maximum.\n");
+        }
+        else
+        {
+            printf("C is maximum.\n");
+        }
     }
-
-    if (b > a && b > c){
+    else if (b > c)
+    {
         printf("B is maximum.\n");
     }
-
-    if (c > b && c > a){
+    else
+    {
         printf("C is maximum.\n");
     }
-
-    printf("Using conditional operator.\n");
-
-    printf("%c is maximum.\n", a > b ? (a > c ? 'A' : 'C' ) : (b > c ? 'B' : 'C' ) );
 
     return 0;
 }
