@@ -1,4 +1,5 @@
 
+#include <stdio.h>
 
 int main()
 {
@@ -12,7 +13,7 @@ int main()
     scanf("%d", &b);
 
     printf("Enter operation (+|-|*|/): ");
-    scanf("%c", &c);
+    scanf(" %c", &c);
 
     switch (c)
     {
@@ -30,9 +31,6 @@ int main()
         break;
     default:
         printf("Invalid operation.\n");
-
-        // Ask user for all the inputs again.
-        return main();
     }
 
     return 0;
