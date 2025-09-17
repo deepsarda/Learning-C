@@ -12,7 +12,7 @@ int main()
     {
         factorial *= i;
     }
-    printf("Factorial of %d = %d\n", n, factorial);
+    printf("Factorial of %d = %d.\n", n, factorial);
 
     return 0;
 }
