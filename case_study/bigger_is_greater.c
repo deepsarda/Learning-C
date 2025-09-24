@@ -1,35 +1,60 @@
 #include <stdio.h>
-#include <strings.h>
-#include <stdlib.h>
+#include <string.h>
 
-int compare_chars(const void *a, const void *b)
+void swap_char(char *a, char *b)
 {
-    return (*(char *)a - *(char *)b);
+    char tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
+void reverse_suffix(char *s, int l, int r)
+{
+    while (l < r)
+    {
+        swap_char(&s[l], &s[r]);
+        l++;
+        r--;
+    }
 }
 
 int main()
 {
-    int t, i;
-
+    int t;
     scanf("%d", &t);
 
-    char words[t][101];
-
-    for (i = 0; i < t; i++)
+    char s[101];
+    for (int case_no = 0; case_no < t; case_no++)
     {
-        scanf("%s", &words[i]);
+        scanf(" %s", s);
+
+        int n = (int)strlen(s);
+
+        int i;
+        for (i = n - 2; i >= 0; i--)
+        {
+            if (s[i] < s[i + 1])
+                break;
+        }
+
+        if (i < 0)
+        {
+            printf("\nno answer");
+            continue;
+        }
+
+        int j;
+        for (j = n - 1; j > i; j--)
+        {
+            if (s[j] > s[i])
+                break;
+        }
+
+        swap_char(&s[i], &s[j]);
+        reverse_suffix(s, i + 1, n - 1);
+
+        printf("\n%s", s);
     }
-
-    for (i = 0; i < t; i++)
-    {
-        char original[101];
-
-        strcpy(original, words[i]);
-
-        qsort(words[i], strlen(words[i]), sizeof(char), compare_chars);
-
-        printf("%s -- %s", original, words[i]);
-    }
-
+    printf("\n");
     return 0;
 }

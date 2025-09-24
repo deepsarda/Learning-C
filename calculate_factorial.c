@@ -15,6 +15,4 @@ int main()
     printf("Factorial of %d = %d.\n", n, factorial);
 
     return 0;
-
-    qwdqwdq
 }

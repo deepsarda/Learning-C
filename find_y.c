@@ -3,7 +3,9 @@
 
 int main()
 {
-    int x, n, y;
+    int x, n;
+
+    double y;
 
     printf("Enter x: ");
     scanf("%d", &x);
@@ -17,7 +19,7 @@ int main()
         y = 1 + x;
         break;
     case 2:
-        y = 1 + (x / n);
+        y = 1 + ((double)x / n);
         break;
     case 3:
         y = 1 + pow(x, n);
@@ -27,7 +29,7 @@ int main()
         break;
     }
 
-    printf("Y(%d,%d) = %d\n", x, n, y);
+    printf("Y(%d,%d) = %lf\n", x, n, y);
 
     return 0;
 }
