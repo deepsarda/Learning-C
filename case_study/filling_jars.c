@@ -17,7 +17,7 @@ int main()
     }
 
     int avg = total / N; // Int division auto rounds down
-    printf("%ld\n", avg);
+    printf("%d\n", avg);
 
     return 0;
 }
