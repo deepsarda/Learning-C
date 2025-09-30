@@ -5,7 +5,7 @@ int main()
 
     int n, sum = 0;
 
-    while (n > 0)
+    do
     {
 
         printf("Enter the number: ");
@@ -13,7 +13,7 @@ int main()
 
         if (n > 0)
             sum += n;
-    }
+    } while (n > 0);
 
     printf("Sum = %d.\n", sum);
 
