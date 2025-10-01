@@ -2,20 +2,20 @@
 
 int main()
 {
-
-    for (int i = 4; i >= 0; i--)
+    for (int i = 0; i < 5; i++)
     {
-        for (int j = 1; j <= 5; j++)
+        for (int j = 0; j < 5; j++)
         {
-            if (j <= i)
+            if (i == j)
             {
-                printf(" ");
+                printf("1");
             }
             else
             {
-                printf("%d", j - i);
+                printf("0");
             }
         }
+
         printf("\n");
     }
 

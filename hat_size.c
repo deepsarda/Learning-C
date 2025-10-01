@@ -36,4 +36,6 @@ int main()
     {
         printf("Sorry, your head size is outside the typical hat size range!\n");
     }
+
+    return 0;
 }

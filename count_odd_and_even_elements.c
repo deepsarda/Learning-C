@@ -11,13 +11,16 @@ int main()
         scanf("%d", &nums[i]);
     }
 
-    int sum = 0;
+    int even = 0;
     for (int i = 0; i < 10; i++)
     {
-        sum += nums[i];
+        if (nums[i] % 2 == 0)
+        {
+            even++;
+        }
     }
 
-    printf("The sum of the numbers is %d", sum);
+    printf("The number of even elements is %d.\nThe number of odd elements is %d.\n", even, 10 - even);
 
     return 0;
 }
